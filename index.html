@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsorship Outreach Agent — Demo | Aqua Ter</title>
+<meta name="description" content="An AI agent that finds brands already sponsoring small YouTube channels, verifies them, finds the right contact, and drafts personalised outreach. Interactive demo.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#">Aqua&nbsp;Ter <span>· AI Agent Services</span></a>
+    <nav class="nav">
+      <a href="#demo">Live demo</a>
+      <a href="#how">How it works</a>
+      <a href="#deliverables">What you get</a>
+      <a href="#contact" class="nav-cta">Request a quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero wrap">
+    <p class="eyebrow">Sponsorship Outreach Agent — interactive demo</p>
+    <h1>An agent that finds sponsors<br>for your YouTube channel.</h1>
+    <p class="lede">It scans brands already sponsoring small channels in your niche, verifies the sponsorship is still active, finds the right person to contact, and drafts outreach that is personal — not a mass template. No video production. No photo editing. Just sponsors.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#demo">Try the live demo</a>
+      <a class="btn btn-ghost" href="#how">See how it works</a>
+    </div>
+    <p class="sample-note">Sample data — brands and contacts below are examples for this demo. In a real run, every brand and contact is re-verified before anything is sent.</p>
+  </section>
+
+  <!-- DEMO -->
+  <section id="demo" class="demo wrap">
+    <h2>Live demo</h2>
+    <p class="section-sub">Pick a niche and a channel size. The agent runs the same pipeline it would run for a real client — on sample data.</p>
+
+    <div class="demo-card">
+      <div class="controls">
+        <div class="control">
+          <label for="channelName">Channel name</label>
+          <input id="channelName" type="text" value="TechScope" maxlength="40">
+        </div>
+        <div class="control">
+          <label for="avgViews">Avg. views / video</label>
+          <input id="avgViews" type="text" value="8,200" maxlength="12">
+        </div>
+        <div class="control">
+          <label for="subsTier">Subscribers</label>
+          <select id="subsTier">
+            <option value="0">5k – 20k</option>
+            <option value="1" selected>20k – 50k</option>
+            <option value="2">50k – 100k</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control">
+        <label>Niche</label>
+        <div class="niches" id="nichePills" role="tablist" aria-label="Niche">
+          <button class="pill active" data-niche="tech" role="tab" aria-selected="true">Tech</button>
+          <button class="pill" data-niche="finance" role="tab" aria-selected="false">Finance</button>
+          <button class="pill" data-niche="gaming" role="tab" aria-selected="false">Gaming</button>
+          <button class="pill" data-niche="education" role="tab" aria-selected="false">Education</button>
+          <button class="pill" data-niche="fitness" role="tab" aria-selected="false">Fitness</button>
+        </div>
+      </div>
+
+      <button id="runBtn" class="btn btn-primary btn-run">Run the agent</button>
+
+      <div id="logPanel" class="log-panel" hidden>
+        <p class="log-title">Agent log</p>
+        <ol id="agentLog" class="agent-log"></ol>
+      </div>
+
+      <div id="results" class="results" hidden>
+        <div class="summary-chips" id="summaryChips"></div>
+        <div class="results-grid">
+          <div>
+            <h3>Verified brands</h3>
+            <p class="hint">Click a brand to see its personalised outreach draft.</p>
+            <div id="brandList" class="brand-list"></div>
+          </div>
+          <div class="draft-col">
+            <h3>Outreach draft</h3>
+            <div id="draftPanel" class="draft-panel">
+              <p class="draft-empty">Select a brand to preview its draft email.</p>
+            </div>
+          </div>
+        </div>
+        <p class="sample-note">Ranges are typical market ranges for this channel size, not guaranteed rates. Contacts shown are common public patterns (e.g. partnerships@) — in a real run the agent verifies the actual decision-maker before sending.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="how wrap">
+    <h2>How the agent works</h2>
+    <p class="section-sub">Six steps, no guesswork. Every step leaves a record you can check.</p>
+    <ol class="steps">
+      <li><strong>Scan the niche</strong><span>Finds videos in your niche with brand integrations from the last 90 days.</span></li>
+      <li><strong>Identify sponsors</strong><span>Lists the brands behind those integrations — brands already paying creators like you.</span></li>
+      <li><strong>Verify activity</strong><span>Drops brands whose sponsorships expired, and flags reused or misleading clips.</span></li>
+      <li><strong>Find the contact</strong><span>Locates the partnerships / creator contact and the decision-maker where public.</span></li>
+      <li><strong>Draft outreach</strong><span>Writes a personal email per brand: your numbers, why the fit is real, one clear ask.</span></li>
+      <li><strong>Follow up</strong><span>Schedules one polite follow-up per brand and reports replies weekly.</span></li>
+    </ol>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section id="deliverables" class="deliverables wrap">
+    <h2>What you get</h2>
+    <div class="deliv-grid">
+      <div class="deliv-card">
+        <h3>Verified brand list</h3>
+        <p>10–20 brands already sponsoring channels your size, with the evidence: which video, when, what deal type.</p>
+      </div>
+      <div class="deliv-card">
+        <h3>Verified contacts</h3>
+        <p>The right inbox per brand — partnerships, creator, or influencer contact — checked before outreach.</p>
+      </div>
+      <div class="deliv-card">
+        <h3>Personalised drafts</h3>
+        <p>One outreach email per brand, written around your channel's numbers and the brand's actual campaigns.</p>
+      </div>
+      <div class="deliv-card">
+        <h3>Follow-up &amp; report</h3>
+        <p>One follow-up per brand, plus a weekly report: sent, replied, negotiating, closed.</p>
+      </div>
+    </div>
+    <p class="pricing-note">Pricing is agreed after scope is clear — no fixed price upfront. You only pay for the run you approve.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact wrap">
+    <h2>Want this for your channel?</h2>
+    <p class="section-sub">Copy the message below and send it to Aqua Ter — include your channel link and your niche, and you will get a quote for one run.</p>
+    <div class="dm-box">
+      <p id="dmText">Hi Aqua Ter — I'd like the Sponsorship Outreach Agent for my YouTube channel. My channel: [paste your channel link]. Niche: [your niche]. Subscribers: [your count]. Please send me a quote for one run.</p>
+      <button id="copyDmBtn" class="btn btn-primary">Copy message</button>
+      <span id="copyDmState" class="copy-state" aria-live="polite"></span>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Demo by <strong>Aqua Ter</strong> — AI agent services for YouTube creators. Sample data for demonstration only; brands, contacts and rates are examples, not guarantees.</p>
+    <p><a href="https://github.com/frenkiofficial/sponsorship-agent-demo">View the source on GitHub</a></p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
